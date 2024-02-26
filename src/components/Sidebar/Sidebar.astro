@@ -1,0 +1,62 @@
+---
+import "./Sidebar.modules.css";
+
+const { page = "" } = Astro.props;
+---
+
+<nav class="center-v">
+  <ul>
+    <li>
+      <a href="/" class={page === "/" && "active"}>
+        <img src="https://img.icons8.com/metro/24/ffffff/home.png" alt="home" />
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/rewards" class={page.includes("/rewards") && "active"}>
+        <img
+          src="https://img.icons8.com/ios-glyphs/24/ffffff/gift--v1.png"
+          alt="rewards"
+        />
+        <span>Daily Rewards</span>
+      </a>
+    </li>
+    <li>
+      <a href="/boxes" class={page.includes("/boxes") && "active"}>
+        <img
+          src="https://img.icons8.com/metro/24/ffffff/open-box.png"
+          alt="Boxes"
+        />
+        <span>Boxes</span>
+      </a>
+    </li>
+    <li>
+      <button id="categories-modal-trigger">
+        <img
+          src="https://img.icons8.com/external-inkubators-glyph-inkubators/24/ffffff/external-menu-email-inkubators-glyph-inkubators.png"
+          alt="Categories"
+        />
+        <span>Categories</span>
+      </button>
+    </li>
+    <li>
+      <a href="/howitworks" class={page.includes("/howitworks") && "active"}>
+        <img
+          src="https://img.icons8.com/ios-filled/24/ffffff/info.png"
+          alt="info"
+        />
+        <span>How It Works</span>
+      </a>
+    </li>
+    <li>
+      <a href="/faq" class={page.includes("/faq") && "active"}>
+        <img
+          src="https://img.icons8.com/fluency-systems-filled/24/ffffff/faq.png"
+          alt="faq"
+        />
+        <span>FAQ</span>
+      </a>
+    </li>
+    <hr />
+  </ul>
+</nav>

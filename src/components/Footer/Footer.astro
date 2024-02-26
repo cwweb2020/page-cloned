@@ -1,0 +1,129 @@
+---
+import "./Footer.modules.css";
+
+const { page = "" } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="footer-social">
+    <img class="footer-logo" src="/Boxed_Light.svg" alt="Logo" />
+    <ul>
+      <li>
+        <a
+          href="https://www.facebook.com/profile.php?id=100094631410543"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png"
+            alt="facebook"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/boxedtcg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png"
+            alt="twitter"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://discord.gg/boxed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/24/ffffff/discord--v1.png"
+            alt="discord"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/boxedtcg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new--v1.png"
+            alt="instagram"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/@boxedtcg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png"
+            alt="youtube-play"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.tiktok.com/@boxedtcg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/24/ffffff/tiktok--v1.png"
+            alt="tiktok"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <nav class="footer-nav">
+    <ul>
+      <li>
+        <a href="/" class={page === "/" && "active"}> Home</a>
+      </li>
+      <li>
+        <a href="/boxes" class={page.includes("/boxes") && "active"}> Boxes</a>
+      </li>
+      <li>
+        <a href="/faq" class={page.includes("/faq") && "active"}> FAQ</a>
+      </li>
+      <li>
+        <a href="/support" class={page.includes("/support") && "active"}>
+          Support
+        </a>
+      </li>
+      <li>
+        <a href="/terms" class={page.includes("/terms") && "active"}>Terms</a>
+      </li>
+      <li>
+        <a href="/privacy" class={page.includes("/privacy") && "active"}>
+          Privacy
+        </a>
+      </li>
+      <li>
+        <a href="/shipping" class={page.includes("/shipping") && "active"}>
+          Shipping
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-legal text-center">
+    &copy; Loot Labs Inc. {new Date().getFullYear()}
+    <p>
+      All product and company names are trademarks or registered trademarks of
+      their respective holders. Use of them does not imply any affiliation with
+      or endorsement by them.
+    </p>
+    <address>
+      2033 6th Ave, Suite #600
+      <br />
+      Seattle, WA 98121
+    </address>
+  </div>
+</footer>

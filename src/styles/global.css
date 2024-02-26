@@ -1,0 +1,232 @@
+@import url(./reset.css);
+@import url(./layouts.css);
+@import url(./fonts.css);
+@import url(./variables.css);
+
+.general-layout {
+  background-color: var(--main-bg-color);
+}
+
+.logo img {
+  max-width: 94px;
+  cursor: pointer;
+}
+
+.chat-user-input {
+  border-top: 2px #303c52 solid;
+}
+
+.logo,
+.nav,
+.user,
+.chat-title { 
+  border-bottom: 2px var(--border-color) solid;
+}
+
+.user,
+.chat {
+  border-left: 2px var(--border-color) solid;
+}
+
+.logo,
+.sidebar {
+  border-right: 2px var(--border-color) solid;
+}
+
+.center-h-v {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-v {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  height: 100%;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.nav ul > li {
+  color: white;
+  display: flex;
+  gap: .5rem;
+}
+
+.user .btn {
+  width: 100%;
+  margin-inline: 2rem;
+}
+
+button.btn,
+a.btn {
+  border-radius: .5rem;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: medium;
+}
+
+a.btn {
+  text-decoration: none;
+  text-align: center;
+}
+
+button.btn {
+  border: none;
+}
+
+.btn.solid-primary {
+  background-color: var(--primary-btn-bg);
+  color: black;
+  border-color: var(--primary-btn-bg);
+}
+
+.btn.solid-primary:hover {
+  background-color: var(--primary-btn-hover-bg);
+}
+
+.btn.solid-green {
+  color: black;
+  background-color: var(--secondary-btn-bg);
+}
+
+.btn.solid-green:hover {
+  color: white;
+}
+
+.btn.outline-green {
+  color: inherit;
+  background-color: transparent;
+  border: 2px var(--secondary-btn-bg) solid;
+}
+
+.btn.outline-green:hover {
+  color: black;
+  background-color: var(--secondary-btn-bg);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 22px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 2px white solid;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--slider-bg);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.chat {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section h1 {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+section h2,
+section h3 {
+  margin-top: 2rem;
+}
+
+section p,
+section h2,
+section span,
+section h3 {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+section span,
+section h3 {
+  margin-bottom: 0;
+}
+
+section a {
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+section a:hover {
+  color: var(--link-hover);
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul > li {
+  padding-left: 2rem;
+  margin-top: .5rem;
+}
+
+section ul > li:first-child {
+  margin-top: 0;
+}
+
+section ul > li:last-child {
+  padding-bottom: 1rem;
+}

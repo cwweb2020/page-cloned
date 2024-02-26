@@ -1,0 +1,44 @@
+.general-layout {
+  display: grid; 
+  grid-template-columns: 264px 1fr 264px; 
+  grid-template-rows: 56px 1.6fr; 
+  grid-template-areas: 
+  "logo nav user"
+  "sidebar main chat";
+}
+
+.logo { grid-area: logo; }
+.nav { grid-area: nav; }
+.user { grid-area: user; }
+.chat { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 58px 1fr 72px; 
+  grid-template-areas: 
+  "chat-title"
+  "chat-messages"
+  "chat-user-input"; 
+  grid-area: chat; 
+ }
+.chat-title { grid-area: chat-title; }
+.chat-user-input { grid-area: chat-user-input; }
+.chat-messages { grid-area: chat-messages; }
+.sidebar { grid-area: sidebar; }
+.main { 
+  grid-area: main;
+}
+
+.terms,
+.shipping,
+.privacy,
+.purchaseterms,
+.referralprogram {
+  padding: 5rem 4rem 1rem;
+}
+
+.terms p,
+.shipping p,
+.purchaseterms p,
+.referralprogram p {
+  margin: 1rem 0;
+}

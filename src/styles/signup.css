@@ -1,0 +1,95 @@
+.signup {
+  color: white;
+  padding: 7rem 0;
+}
+
+.signup form {
+  max-width: 436px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border: 2px var(--border-color) solid;
+  border-radius: .5rem;
+  background-color: var(--main-bg-color);
+
+  box-shadow: #192033 0px 2px 8px 0px;
+}
+
+.signup form label {
+  width: 100%;
+}
+
+.signup form h1 {
+  margin-bottom: 2rem;
+}
+
+.signup form input[type="checkbox"]:hover,
+.signup form label:hover {
+  cursor: pointer;
+}
+
+.signup form input[type="email"],
+.signup form input[type="text"],
+.signup form input[type="password"] {
+  color: white;
+  margin-top: .25rem;
+  width: 100%;
+  padding: .5rem;
+  border: 2px var(--border-color) solid;
+  border-radius: .5rem;
+  background-color: transparent;
+  outline-color: transparent;
+}
+
+.signup form input::placeholder {
+  color: var(--placeholder-text);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.signup form .btn {
+  width: 100%;
+}
+
+.signup form label.agree-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem
+}
+
+.signup form input[type="checkbox"] {
+  width: 1.4em;
+  height: 1.2rem;
+  
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+.signup form input[type="checkbox"]::before {
+  clip-path: polygon(17% 54%, 28% 43%, 38% 54%, 70% 22%, 81% 33%, 38% 75%, 17% 54%);
+  transform: scale(0);
+  background-color: white;
+}
+
+.signup form input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  content: "\2713";
+}
+
+.signup form .form-logo {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.signup img {
+  width: 94px;
+}

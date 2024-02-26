@@ -1,0 +1,57 @@
+---
+import Footer from "../components/Footer/Footer.astro";
+import Sidebar from "../components/Sidebar/Sidebar.astro";
+const { page = '' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Boxed.GG - Virtual Mystery Boxes, Real Prizes</title>
+    <meta
+      name="description"
+      content="Unbox rare collectibles like real Pokemon and Magic trading cards or digital collectibles and art. See the prizes in every box before you open!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="general-layout">
+    <a href="/" class="logo center-h-v">
+      <img src="/Boxed_Light.svg" alt="Logo" />
+    </a>
+    <nav class="nav">
+      <ul>
+        <li>
+          <span>Audio</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <div class="user center-h-v">
+      <a href="/signup" class="btn solid-primary font-bold">Register</a>
+    </div>
+    <aside class="sidebar center-v">
+      <Sidebar page={page} />
+    </aside>
+    <main class="main">
+      <slot />
+      <Footer page={page}/>
+    </main>
+    <div class="chat">
+      <div class="chat-title center-h-v">Chat</div>
+      <div class="chat-messages">
+        <slot name="chat" />
+      </div>
+      <div class="chat-user-input center-h-v">online</div>
+    </div>
+  </body>
+</html>

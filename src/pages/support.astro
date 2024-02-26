@@ -1,0 +1,71 @@
+---
+import "./src/styles/global.css";
+import "./src/styles/support.css";
+
+import ThreeColumns from "../layouts/ThreeColumns.astro";
+---
+
+<ThreeColumns page="/support">
+  <section class="support center-h-v">
+    <div class="support-header">
+      <h1>Need some help?</h1>
+      <p>Get in touch and let us know how we can help.</p>
+    </div>
+    <div class="support-channels">
+      <a href="/faq">
+        <div class="help-card">
+          <div class="bg-rounded center-h-v">
+            <img
+              src="https://img.icons8.com/fluency-systems-filled/48/ffffff/faq.png"
+              alt="Help Desk"
+            />
+          </div>
+          <h2>Help Desk</h2>
+          <p>
+            Visit our help desk where we answer the most frequently asked
+            questions.
+          </p>
+        </div>
+      </a>
+      <a
+        href="https://discord.gg/boxed"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="help-card">
+          <div class="bg-rounded center-h-v">
+            <img
+              src="https://img.icons8.com/ios-filled/48/ffffff/discord--v1.png"
+              alt="Discord"
+            />
+          </div>
+          <h2>Discord</h2>
+          <p>
+            Join our discord and get help from our awesome community or open a
+            ticket.
+          </p>
+        </div>
+      </a>
+      <button class="live-support-trigger">
+        <div class="help-card">
+          <div class="bg-rounded center-h-v">
+            <img
+              src="https://img.icons8.com/glyph-neue/48/ffffff/customer-support.png"
+              alt="Live Support"
+            />
+          </div>
+          <h2>Live Support</h2>
+          <p>
+            Contact our experienced live support team who can answer all of your
+            questions.
+          </p>
+        </div>
+      </button>
+    </div>
+    <small class="support-mail">
+      For any other inquiries or questions about boxed.gg please contact <a
+        href="mailto:support@boxed.gg">support@boxed.gg</a
+      >
+    </small>
+  </section>
+</ThreeColumns>

@@ -1,0 +1,97 @@
+.support {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.support .support-header {
+  margin: 5rem 0;
+}
+
+.support .support-header h1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.support .support-header p {
+  color: var(--light-grey);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.support .support-channels {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.support .support-channels a {
+  text-decoration: none;
+  white-space: inherit;
+}
+
+.support .support-channels button {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.support .support-channels a,
+.support .support-channels button {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.support .support-channels a .help-card,
+.support .support-channels button .help-card {
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border: 2px var(--card-border) solid;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: center;
+  max-width: 368px;
+  min-height: 248px;
+  text-align: center;
+}
+
+.support .support-mail {
+  margin: 2rem 0;
+  color: var(--light-grey);
+}
+
+.support .support-mail > a {
+  color: var(--primary-btn-bg);
+}
+
+.support .support-mail > a:hover {
+  color: white;
+}
+
+.support .support-channels h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.support .support-channels p {
+  color: var(--light-grey);
+  font-weight: 700;
+}
+
+.support .support-channels .bg-rounded {
+  background-color: var(--card-border);
+  border-radius: .5rem;
+  width: 4rem;
+  height: 4rem;
+}

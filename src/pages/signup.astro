@@ -1,0 +1,45 @@
+---
+import "./src/styles/global.css";
+import "./src/styles/signup.css";
+
+import ThreeColumns from "../layouts/ThreeColumns.astro";
+---
+
+<ThreeColumns page="/signup">
+  <section class="signup center-h-v">
+    <form action="">
+      <h1>Create account</h1>
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="address@email.com"
+        />
+      </label>
+      <label>
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="********"
+        />
+      </label>
+      <label class="agree-checkbox">
+        <input type="checkbox" name="terms" id="terms" />
+        I agree to the Terms of Service and Privacy Policy
+      </label>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <button type="submit" class="btn solid-green"> Create account</button>
+
+      <a href="/login" class="btn outline-green">Go to Login</a>
+
+      <a href="/" class="form-logo">
+        <img class="footer-logo" src="/Boxed_Light.svg" alt="Logo" />
+      </a>
+    </form>
+  </section>
+</ThreeColumns>

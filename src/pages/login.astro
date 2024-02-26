@@ -1,0 +1,43 @@
+---
+import "./src/styles/global.css";
+import "./src/styles/login.css";
+
+import ThreeColumns from "../layouts/ThreeColumns.astro";
+---
+
+<ThreeColumns page="/login">
+  <section class="login center-h-v">
+    <form action="">
+      <h1>Login</h1>
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="address@email.com"
+        />
+      </label>
+      <label>
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="********"
+        />
+      </label>
+      
+      <button type="submit" class="btn solid-green">Login</button>
+
+      <a href="/signup" class="btn outline-green">Sign-up</a>
+
+      <div class="forgot">
+        <a href="/forgotpassword">Forgot password...</a>
+      </div>
+      <a href="/" class="form-logo">
+        <img class="footer-logo" src="/Boxed_Light.svg" alt="Logo" />
+      </a>
+    </form>
+  </section>
+</ThreeColumns>
