@@ -1,22 +1,24 @@
 ---
- const  { icon, background, mainPic } = Astro.props
+ const  { cardAmount, cardTitle, icon, background, mainPic, tag= "none" } = Astro.props
 ---
 
 
 
 <a class="featured-card-link" href="#">
-    <div class="featured-card-tag">
-        New
+    <div class={`featured-card__tag--${tag}`}>
+      {tag}
+    </div>
+    <div class="featured-card__icon--number">
+      <img src="/images/top-number.svg" alt="">
     </div>
 <div class="featured-card">
     <img class="featured-card-back-img" src={background} alt="">
     <div class="card-content">
-      <img src={mainPic || "/images/card.webp" } alt="feature1"/>
+      <img class="featured-card__img" src={mainPic || "/images/card.webp" } alt="feature1"/>
       <div class="featured-card-footer">
-        <span>Promo Box</span>
-      <span class="featured-card-footer-icon-container"><img src={icon} alt=""> 379</span>
+        <span>{cardTitle}</span>
+      <span class="featured-card-footer-icon-container"><img src={icon} alt="">{cardAmount}</span>
       </div>
-
     </div>
 </div>
 </a>

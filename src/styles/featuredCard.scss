@@ -3,12 +3,22 @@
     padding: 32px;
     min-height: 60vh;
 
-    .featured-box-title {
-      font-size: 24px;
-      text-transform: capitalize;
-      color: white;
-      margin: 0;
-      margin-bottom: 8px;
+    .featured-box__title-container {
+      display: flex;
+      align-items: center;
+      .featured-box-title {
+        font-size: 24px;
+        text-transform: capitalize;
+        color: white;
+        margin: 0;
+        margin-bottom: 8px;
+        margin-right: 26px;
+      }
+      a {
+        color: #27beff;
+        text-decoration: none;
+        font-size: 16px;
+      }
     }
 
     .featured-card-wrapper {
@@ -32,9 +42,10 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            img {
-              height: 234px;
+            .featured-card__img {
+              height: 227px;
               object-fit: cover;
+              padding-top: 20px;
             }
 
             .featured-card-footer {
@@ -71,16 +82,42 @@
 
         &:hover {
           color: #fff !important;
+          .featured-card__img {
+            transform: scale(1.05) rotate(8deg);
+            transition: all 200ms;
+          }
         }
 
-        .featured-card-tag {
+        .featured-card__tag {
+          &--new,
+          &--popular {
+            position: absolute;
+            padding: 3px 8px;
+            border-radius: 10px;
+            top: -5px;
+            z-index: 10;
+            font-size: 12px;
+            text-transform: capitalize;
+          }
+          &--new {
+            background: red;
+          }
+          &--popular {
+            background: #f55929;
+          }
+          &--none {
+            display: none;
+          }
+        }
+
+        .featured-card__icon--number {
           position: absolute;
-          background: red;
-          padding: 3px 8px;
-          border-radius: 10px;
-          top: -5px;
-          z-index: 10;
-          font-size: 12px;
+          right: 13px;
+          top: 6px;
+          width: 26px;
+          img {
+            width: 100%;
+          }
         }
       }
     }

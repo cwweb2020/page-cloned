@@ -1,25 +1,32 @@
 ---
 import "./src/styles/global.css";
+import Button from "./src/components/Button.astro";
+const {location, avatar, userName, percentage, boxName, cardName, cardImg  } = Astro.props
 ---
 
 <!-- card -->
 <a href="#">
     <div class="card">
+    <!-- <div class="card__button">
+        <button>Legendary Hunt</button>
+    </div> -->
+    <Button />
     <div class="image-card-container">
-        <img src="/images/img2.webp" alt="image-card" />
+        <img src={ cardImg || `/images/img2.webp` } alt="image-card" />
     </div>
     <div class="right-card-box">
-        <h4>charmander...</h4>
-        <p>SWSH: Sword...</p>
-        <div class="right-card-footer"> <span class="inside-ball"></span> 0.25%</div>
+        <h4>{cardName}</h4>
+        <p>{boxName}.</p>
+        <div class="right-card-footer"> <span class="inside-ball"></span>{percentage}%</div>
     </div>
     
     </div>
         <div class="bottom-card">
-        <img src="/images/bottom-img.webp" alt="">
+        <img src={ avatar || `/images/bottom-img.webp` } alt="avatar">
         <span>
-            GreenSCOPE
+            {userName}
         </span>
         </div>
 </a>
 <!-- card -->
+

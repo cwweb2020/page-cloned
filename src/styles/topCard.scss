@@ -16,12 +16,11 @@
       }
     }
     .card-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+      display: flex;
       color: white;
       padding: 12px 0 0 16px;
       gap: 20px;
-      width: 2500px;
+      overflow-x: hidden;
 
       a {
         text-decoration: none;
@@ -31,6 +30,7 @@
           gap: 10px;
           border: 2px solid #3c81f6;
           border-radius: 8px;
+          position: relative;
           .image-card-container {
             width: 69px;
             height: 96px;
@@ -75,6 +75,39 @@
                 margin-right: 8px;
               }
             }
+          }
+
+          // hover button
+          .card__button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #6060744f;
+            backdrop-filter: blur(0.5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            button {
+              background: #27beff;
+              border: none;
+              outline: none;
+              padding: 17px 14px;
+              border-radius: 10px;
+              font-size: 20px;
+              cursor: pointer;
+              &:hover {
+                background-color: #078bc4;
+                transition: all 300ms;
+              }
+            }
+          }
+
+          &:hover .card__button {
+            display: flex;
+            transition: all 300ms;
           }
         }
 

@@ -4,6 +4,7 @@ import '../styles/home.scss'
 import ThreeColumns from "../layouts/ThreeColumns.astro";
 import Card  from "../components/Card/Card.astro";
 import BigCard  from "../components/Card/BigCard.astro";
+import {smallCards} from "../utils/test.js";
 ---
 
 <ThreeColumns page="/">
@@ -21,12 +22,19 @@ import BigCard  from "../components/Card/BigCard.astro";
       <h3 class="top-card-title">top pulls</h3>
      </div>
         <div class="card-wrapper">
-        <Card  />
-        <Card  />
-        <Card  />
-        <Card  />
-        <Card  />
-        <Card  />
+        <!-- card -->
+        {
+          smallCards.map(el => (
+            <Card 
+            location={el.location}
+            userName={el.userName}
+            boxName={el.boxName}
+            cardName={el.cardName}
+            percentage={el.percentage}
+            />
+          ))
+        }
+          <!-- card -->
         </div>
     </article>
    </section>
@@ -34,21 +42,32 @@ import BigCard  from "../components/Card/BigCard.astro";
    <section id="totalCard" class="featured-box-total">
    
     <div class="featured-box-container">
-     <h3 class="featured-box-title">Featured Boxes</h3>
+      <div class="featured-box__title-container">
+        <h3 class="featured-box-title">Featured Boxes</h3>
+        <a href="#">View all</a>
+      </div>
       <div class="featured-card-wrapper">
+
        <BigCard
         background="/images/bigcardback.webp" 
         icon="/images/diamond.svg" 
         mainPic="/images/card2.webp" 
+        tag="popular"
+        cardTitle="Legendary Hunt"
+        cardAmount="379"
         />
-       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
-       <BigCard background="/images/bigcardback.webp" icon="/images/diamond.svg" />
+
+       <BigCard cardAmount="379" cardTitle="Celebrations"  background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+       <BigCard cardAmount="379" cardTitle="Celebrations" tag="new" background="/images/bigcardback.webp" icon="/images/diamond.svg" />
        <BigCard
        background="/images/bigcardback.webp" 
        icon="/images/diamond.svg" 
        mainPic="/images/card2.webp" 
+       tag="new"
+       cardTitle="Legendary Hunt"
+       cardAmount="379"
        />
-       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+       <BigCard cardAmount="379" cardTitle="Legendary Hunt" tag="new" background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
       </div>
     </div>
 
@@ -59,21 +78,31 @@ import BigCard  from "../components/Card/BigCard.astro";
    <section id="totalCard" class="featured-box-total">
    
     <div class="featured-box-container">
-     <h3 class="featured-box-title">Starter Boxes</h3>
+      <div class="featured-box__title-container">
+        <h3 class="featured-box-title">Starter Boxes</h3>
+        <a href="#">View all</a> -->
+      </div>
       <div class="featured-card-wrapper">
-       <BigCard
+        <BigCard
         background="/images/bigcardback.webp" 
         icon="/images/diamond.svg" 
         mainPic="/images/card2.webp" 
+        tag="popular"
+        cardTitle="Legendary Hunt"
+        cardAmount="379"
         />
-       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
-       <BigCard background="/images/bigcardback.webp" icon="/images/diamond.svg" />
+
+       <BigCard cardAmount="379" cardTitle="Celebrations"  background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+       <BigCard cardAmount="379" cardTitle="Celebrations" tag="new" background="/images/bigcardback.webp" icon="/images/diamond.svg" />
        <BigCard
        background="/images/bigcardback.webp" 
        icon="/images/diamond.svg" 
        mainPic="/images/card2.webp" 
+       tag="new"
+       cardTitle="Legendary Hunt"
+       cardAmount="379"
        />
-       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+       <BigCard cardAmount="379" cardTitle="Legendary Hunt" tag="new" background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
       </div>
     </div>
   </section>

@@ -1,0 +1,48 @@
+export const smallCards = [
+  {
+    cardImg: "url1.jpg",
+    cardName: "Fire Energy...",
+    boxName: "SWSH: Sword...",
+    percentage: 75,
+    userName: "GreenSCOPE",
+    avatar: "avatar1.jpg",
+    location: "Location 1",
+  },
+  {
+    cardImg: "url2.jpg",
+    cardName: "Fire Energy...",
+    boxName: "SWSH: Sword...",
+    percentage: 60,
+    userName: "GreenSCOPE",
+    avatar: "avatar2.jpg",
+    location: "Location 2",
+  },
+
+  {
+    cardImg: "url10.jpg",
+    cardName: "Fire Energy...",
+    boxName: "SWSH: Sword...",
+    percentage: 85,
+    userName: "GreenSCOPE",
+    avatar: "avatar10.jpg",
+    location: "Location 10",
+  },
+  {
+    cardImg: "url11.jpg",
+    cardName: "Fire Energy...",
+    boxName: "SWSH: Sword...",
+    percentage: 15,
+    userName: "GreenSCOPE",
+    avatar: "avatar10.jpg",
+    location: "Location 10",
+  },
+  {
+    cardImg: "url11.jpg",
+    cardName: "Fire Energy...",
+    boxName: "SWSH: Sword...",
+    percentage: 15,
+    userName: "GreenSCOPE",
+    avatar: "avatar10.jpg",
+    location: "Location 10",
+  },
+];
