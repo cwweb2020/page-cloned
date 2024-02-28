@@ -1,9 +1,94 @@
 ---
 import "./src/styles/global.css";
-
+import '../styles/home.scss'
 import ThreeColumns from "../layouts/ThreeColumns.astro";
+ import Card  from "../components/Card/Card.astro";
+ import BigCard  from "../components/Card/BigCard.astro";
 ---
 
 <ThreeColumns page="/">
-  <h1>hello</h1>
+  <section class="header">
+     <header>
+       <img src="/images/logo.webp" alt="logo">
+       <a href="">How It Works</a>
+     </header>
+  </section>
+
+   <section class="top-card-section">
+    <article class="top-card-big-container">
+     <div class="top-card-title-container">
+      <img src="/images/clock-icon.svg" alt="clock">  
+      <h3 class="top-card-title">top pulls</h3>
+     </div>
+        <div class="card-wrapper">
+        <Card  />
+        <Card  />
+        <Card  />
+        <Card  />
+        <Card  />
+        <Card  />
+
+        </div>
+    </article>
+   </section>
+
+   <section id="totalCard" class="featured-box-total">
+   
+    <div class="featured-box-container">
+     <h3 class="featured-box-title">Featured Boxes</h3>
+      <div class="featured-card-wrapper">
+       <BigCard
+        background="/images/bigcardback.webp" 
+        icon="/images/diamond.svg" 
+        mainPic="/images/card2.webp" 
+        />
+       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+       <BigCard background="/images/bigcardback.webp" icon="/images/diamond.svg" />
+       <BigCard
+       background="/images/bigcardback.webp" 
+       icon="/images/diamond.svg" 
+       mainPic="/images/card2.webp" 
+       />
+       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+      </div>
+    </div>
+
+  </section>
+
+    <div class="separator"></div>
+    {/* <!-- other section --> */}
+   <section id="totalCard" class="featured-box-total">
+   
+    <div class="featured-box-container">
+     <h3 class="featured-box-title">Starter Boxes</h3>
+      <div class="featured-card-wrapper">
+       <BigCard
+        background="/images/bigcardback.webp" 
+        icon="/images/diamond.svg" 
+        mainPic="/images/card2.webp" 
+        />
+       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+       <BigCard background="/images/bigcardback.webp" icon="/images/diamond.svg" />
+       <BigCard
+       background="/images/bigcardback.webp" 
+       icon="/images/diamond.svg" 
+       mainPic="/images/card2.webp" 
+       />
+       <BigCard background="/images/bigcardback2.webp" icon="/images/diamond.svg" />
+      </div>
+    </div>
+
+  </section>
 </ThreeColumns>
+
+ <style>
+
+  .separator {
+    border-top: 2px #303c52 solid;
+    margin-left: 47px;
+  }
+ </style>
+
+
+
+<script src="../utils/test.js"></script>

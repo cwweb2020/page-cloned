@@ -1,0 +1,24 @@
+---
+ const  { icon, background, mainPic } = Astro.props
+
+
+---
+
+
+
+<a class="featured-card-link" href="#">
+    <div class="featured-card-tag">
+        New
+    </div>
+<div class="featured-card">
+    <img class="featured-card-back-img" src={background} alt="">
+    <div class="card-content">
+      <img src={mainPic || "/images/card.webp" } alt="feature1"/>
+      <div class="featured-card-footer">
+        <span>Promo Box</span>
+      <span class="featured-card-footer-icon-container"><img src={icon} alt=""> 379</span>
+      </div>
+
+    </div>
+</div>
+</a>

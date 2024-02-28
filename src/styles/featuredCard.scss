@@ -1,0 +1,91 @@
+.featured-box-total {
+  .featured-box-container {
+    padding: 32px;
+    min-height: 60vh;
+
+    .featured-box-title {
+      font-size: 24px;
+      text-transform: capitalize;
+      color: white;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    .featured-card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(219px, 219px));
+      color: white;
+      padding: 12px 0 0 16px;
+      gap: 20px;
+
+      .featured-card-link {
+        text-decoration: none;
+        position: relative;
+
+        .featured-card {
+          height: 327px;
+          border: 2px solid rgb(48 60 82);
+          // opacity: 0.85;
+          border-radius: 6px;
+          position: relative;
+
+          .card-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            img {
+              height: 234px;
+              object-fit: cover;
+            }
+
+            .featured-card-footer {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              flex: 1;
+              justify-content: center;
+              span {
+                font-size: 20px;
+                margin-bottom: 10px;
+              }
+              .featured-card-footer-icon-container {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                img {
+                  height: 22px;
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+          .featured-card-back-img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.3;
+          }
+        } //
+
+        &:hover {
+          color: #fff !important;
+        }
+
+        .featured-card-tag {
+          position: absolute;
+          background: red;
+          padding: 3px 8px;
+          border-radius: 10px;
+          top: -5px;
+          z-index: 10;
+          font-size: 12px;
+        }
+      } ///  End of Featured Card link
+    }
+  }
+}
